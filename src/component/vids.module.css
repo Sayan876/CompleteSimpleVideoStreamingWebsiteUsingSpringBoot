@@ -1,0 +1,503 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+/* #nav{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    position: fixed;
+    z-index: 9999;
+
+    
+}
+
+#nav>a{
+    color: white;
+    transition: 0.5s;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 20px;
+}
+
+#nav>a:active{
+    color: red;
+}
+
+#nav>form{
+  width: 70%;
+}
+
+#nav>form>.searchBar{
+  width: 60%;
+}
+
+#nav>form>.searchButton{
+  width: 45px;
+  height: 45px;
+  background-color: rgba(26, 25, 25, 0);
+} */
+
+/* alternate css for nav */
+
+/* NAVBAR MAIN WRAPPER */
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: #0f0f0f; /* Dark YouTube theme */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  /* box-shadow: 0 2px 8px rgba(255, 0, 0, 0.15); */
+  border-bottom: 1px solid grey;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* LEFT SIDE - LOGO */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b91c1c; /* dark red accent */
+  letter-spacing: 1px;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #ff1a1a;
+}
+
+/* SEARCH BAR CONTAINER */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+/* SEARCH INPUT */
+.searchBar {
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #1a0000; /* deep dark red */
+  border: 1px solid #b91c1c;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 30px 0 0 30px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.searchBar::placeholder {
+  color: #ccc;
+}
+
+.searchBar:focus {
+  border-color: #ff1a1a;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+/* SEARCH BUTTON */
+.searchButton {
+  background-color: #b91c1c;
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 0 30px 30px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+}
+
+/* RIGHT SIDE LINKS */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LINKS STYLE */
+.navLink {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ff1a1a;
+}
+
+/* SIGNUP BUTTON */
+.signUpBtn {
+  background-color: #b91c1c;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.signUpBtn:hover {
+  background-color: #ff1a1a;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .searchContainer {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .rightSection {
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+.pageContainer {
+  background-color: #0f0f0f;
+  min-height: 100vh;
+  color: #fff;
+  padding: 40px 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #ff4444;
+}
+
+/* Grid for videos */
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 30px;
+}
+
+/* Each video card */
+.videoCard {
+  background-color: #1e1e1e;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(255, 68, 68, 0.3);
+}
+
+/* Video player styling */
+.videoWrapper {
+  position: relative;
+  background-color: #000;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #333;
+}
+
+/* Video info below player */
+.videoInfo {
+  padding: 15px;
+}
+
+/* User section */
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.userImage {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff4444;
+  transition: transform 0.3s ease;
+}
+
+.userImage:hover {
+  transform: scale(1.1);
+}
+
+/* Texts */
+.userName {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.videoTitle {
+  font-size: 0.9rem;
+  color: #ffaaaa;
+  margin-top: 3px;
+}
+
+.videoDescription {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+.uploadedAt{
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 20px;
+  }
+
+  .videoPlayer {
+    height: 200px;
+  }
+
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* For the sign up */
+
+/* Background layout */
+.container {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background: radial-gradient(circle at top left, #0f2027, #ff0000, #642c2c);
+  color: #eaeaea;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Form card */
+.form {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 30px 35px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.8s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #00ffff;
+  letter-spacing: 1px;
+}
+
+/* Inputs & Textareas */
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px;
+  color: #eaeaea;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 8px #00ffff50;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+label {
+  font-size: 13px;
+  margin-top: 5px;
+  color: #cccccc;
+}
+
+/* Submit button */
+.button {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #00c6ff80;
+}
+
+/* Message styling */
+.message {
+  text-align: center;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.message:contains("successfully") {
+  color: #00ff99;
+  background: rgba(0, 255, 153, 0.08);
+  border: 1px solid rgba(0, 255, 153, 0.2);
+}
+
+.message:contains("not match"),
+.message:contains("wrong"),
+.message:contains("Please fill") {
+  color: #ff6b6b;
+  background: rgba(255, 0, 0, 0.08);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* countries */
+
+.select {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px;
+  color: #eaeaea;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+}
+
+.select:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 8px #00ffff50;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.select option {
+  background-color: #1a1a1a;
+  color: #eaeaea;
+}
+
+
+
+/* for searchbar  */
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  gap: 10px;
+}
+
+.searchBar {
+  width: 60%;
+  max-width: 600px;
+  padding: 12px 18px;
+  background-color: #121212;
+  border: 1px solid #333;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 40px 0 0 40px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.searchBar:focus {
+  border-color: #b91c1c;
+  box-shadow: 0 0 10px rgba(185, 28, 28, 0.6);
+}
+
+.searchButton {
+  background-color: #b91c1c !important;
+  border: none !important;
+  padding: 12px 25px;
+  border-radius: 0 40px 40px 0;
+  color: white !important;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #ff1a1a !important;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+  transform: scale(1.05);
+}

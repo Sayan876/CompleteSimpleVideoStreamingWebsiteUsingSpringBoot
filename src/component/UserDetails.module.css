@@ -1,0 +1,405 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Profile Card */
+.profileCard {
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 25px;
+  padding: 3rem;
+  width: 520px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+  margin-bottom: 3rem;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f39c12;
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.7);
+}
+
+.fileUploadContainer {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chooseFileBtn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.uploadBtn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.deleteProfileBtn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.name {
+  margin: 10px 0 5px 0;
+  font-size: 1.9rem;
+  color: #f39c12;
+}
+
+.email {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.infoBox {
+  background: #2f2f2f;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.logoutBtn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  background: #e74c3c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Video Section */
+.videosContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.videoCard {
+  background: #222;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.video {
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.videoInfo {
+  color: #fff;
+}
+
+.videoTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #f39c12;
+}
+
+.videoDesc {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #ccc;
+}
+
+.uploadedAt {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.editBtn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #e74c3c;
+  color: white;
+  cursor: pointer;
+}
+
+.saveBtn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #2ecc71;
+  color: white;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #95a5a6;
+  color: white;
+  cursor: pointer;
+}
+
+.editBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #1c1c1c;
+  color: #fff;
+}
+
+.textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #1c1c1c;
+  color: #fff;
+  resize: vertical;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #1e1e1e;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Upload Section */
+.uploadSection {
+  background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+  border-radius: 25px;
+  padding: 3rem 2rem;
+  width: 650px;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+  margin-bottom: 3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.uploadHeading {
+  color: #f39c12;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.uploadSubText {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.uploadForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.inputLarge,
+.textareaLarge,
+.fileInput {
+  width: 90%;
+  border-radius: 10px;
+  border: 1px solid #555;
+  background: #1c1c1c;
+  color: #fff;
+  outline: none;
+}
+
+.inputLarge {
+  padding: 12px 14px;
+  font-size: 1rem;
+}
+
+.textareaLarge {
+  padding: 12px 14px;
+  font-size: 1rem;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.fileInput {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.bigUploadBtn {
+  width: 90%;
+  padding: 14px 0;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.5);
+  transition: all 0.3s ease;
+}
+
+.bigUploadBtn:hover {
+  background: linear-gradient(90deg, #f1c40f, #e67e22);
+  box-shadow: 0 0 25px rgba(243, 156, 18, 0.7);
+}
+
+.deleteAccountBtn {
+  padding: 12px 30px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #ff4b2b, #c0392b);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(231, 76, 60, 0.6);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.deleteAccountBtn:hover {
+  box-shadow: 0 0 25px rgba(231, 76, 60, 0.8);
+}
+
+
+
+
+.progressContainer {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 16px;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.progressBar {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressText {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+
+
+/*select menu */ 
+
+.select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #f39c12 50%), 
+                    linear-gradient(135deg, #f39c12 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1rem + 2px), calc(100% - 15px) calc(1rem + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select:hover {
+  border-color: #f39c12;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.select option {
+  background-color: #222;
+  color: white;
+}
+
